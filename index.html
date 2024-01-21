@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Country API</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js" async></script>
+</head>
+
+<body class="light">
+    <section class="top-bar">
+        <h2>Where in the world?</h2>
+        <div onclick="switch_mode()" class="mode-bt">
+            <ion-icon name="moon-outline"></ion-icon>
+            <p class="dark-mode">Dark Mode</p>
+        </div>
+    </section>
+    <section class="bottom-bar">
+
+        <section class="filer-bar">
+            <section class="search-bar">
+                <ion-icon name="search-outline"></ion-icon>
+                <input onkeydown="filter_name(this.value)" type="text" placeholder="Search for a country...">
+            </section>
+            <section onclick="tgl_drp()" class="dropdown">
+                <p>Filter by Region</p>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+                <section id="filter-dp" class="dropdown-content">
+                    <p onclick="load_region(this,this.innerText)">Africa</p>
+                    <p onclick="load_region(this,this.innerText)">America</p>
+                    <p onclick="load_region(this,this.innerText)" class="d-active">Asia</p>
+                    <p onclick="load_region(this,this.innerText)">Europe</p>
+                    <p onclick="load_region(this,this.innerText)">Oceania</p>
+                </section>
+            </section>
+        </section>
+
+        <section class="countries" id="ctc">
+
+        </section>
+        <section id="detail-cc" class="c-detail">
+            <section class="c-detail-top">
+                <div onclick="tgl_detail()" class="mode-bt">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    <p class="dark-mode">Back</p>
+                </div>
+            </section>
+            <section class="c-detail-bottom">
+                <img id="cdi" src="https://flagcdn.com/ad.svg" alt="">
+                <section class="cd-cont">
+                    <h1 id="cdh">Germany</h1>
+                    <section class="sub-d">
+                        <section>
+                            <p id="cdn">Native Name: <span>Deutschland</span></p>
+                            <p id="cdp">Population: <span>81,770,900</span></p>
+                            <p id="cdr">Region: <span>Europe</span></p>
+                            <p id="cds">Sub Region: <span>Western Europe</span></p>
+                            <p id="cdc">Capital: <span>Berlin</span></p>
+                        </section>
+                        <section>
+                            <p id="cdt">Top Level Domain: <span>.de</span></p>
+                            <p id="cdm">Currencies: <span>Euro</span></p>
+                            <p id="cdl">Languages: <span>German</span></p>
+                        </section>
+                    </section>
+                    <section id="bcdc" class="bc-dc">
+                        <p>Border Countries: </p>
+                        <section id="bdc">
+                        <section class="bc">
+                            <p>France</p>
+                        </section>
+                        </section>
+                    </section>
+                </section>
+                
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>
