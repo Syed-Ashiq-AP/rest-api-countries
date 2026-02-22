@@ -1,62 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
-*{
+* {
     padding: 0;
     margin: 0;
     transition: all 0.3s ease;
     font-family: "Nunito Sans", sans-serif;
 }
 
-body,html{
+body,
+html {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     background-color: var(--bgcolor);
 }
 
-.dark{
+.dark {
     color: hsl(0, 0%, 100%);
     --bgcolor: hsl(207, 26%, 17%);
     --topbgcolor: hsl(209, 23%, 22%);
     --bt_bgcolor: hsl(0, 0%, 100%);
     --inputbg: hsl(209, 23%, 22%);
-    --inputcolor:white;
+    --inputcolor: white;
     --hovercolor: hsl(209, 23%, 27%);
-    
 }
 
-.light{
+.light {
     color: hsl(0, 0%, 0%);
     --bgcolor: hsl(0, 0%, 98%);
     --topbgcolor: white;
     --bt_bgcolor: hsl(0, 0%, 100%);
     --inputbg: hsl(0, 0%, 100%);
-    --inputcolor:white;
+    --inputcolor: rgb(0, 0, 0);
     --hovercolor: hsl(0, 0%, 90%);
-    
 }
 
-.dark input::placeholder{
+.dark input::placeholder {
     color: white;
 }
 
-
-.top-bar{
+.top-bar {
     width: 100vw;
     height: 8vh;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--topbgcolor);
 }
 
-h2{
+h2 {
     font-weight: 800;
     margin-left: 5%;
 }
 
-.mode-bt{
+.mode-bt {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -66,17 +64,15 @@ h2{
     padding: 5px;
     border-radius: 5px;
 }
-.mode-bt p{
-    
+.mode-bt p {
     font-weight: 600;
 }
 
-.mode-bt:hover{
+.mode-bt:hover {
     background-color: var(--hovercolor);
 }
 
-
-.bottom-bar{
+.bottom-bar {
     height: auto;
     width: 90%;
     padding-left: 5%;
@@ -89,7 +85,7 @@ h2{
     margin-top: 2%;
 }
 
-.filer-bar{
+.filer-bar {
     width: 90vw;
     height: 100px;
     display: flex;
@@ -98,25 +94,24 @@ h2{
     justify-content: space-between;
 }
 
-.search-bar{
-
+.search-bar {
     width: 30%;
     padding: 15px 20px;
     background-color: var(--inputbg);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     display: flex;
     align-items: center;
     gap: 10px;
-
+    color: var(--inputcolor);
 }
 
-.search-bar ion-icon{
+.search-bar ion-icon {
     color: var(--inputcolor);
     font-size: 1.2rem;
 }
 
-input{
+input {
     width: 100%;
     border: none;
     margin-left: 2%;
@@ -125,11 +120,11 @@ input{
     color: var(--inputcolor);
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
-.dropdown{
+.dropdown {
     width: 15%;
     height: 40px;
     display: flex;
@@ -138,23 +133,22 @@ input:focus{
     justify-content: space-between;
     gap: 10px;
     background-color: var(--inputbg);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 5px 20px;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
 }
 
-.dropdown:active{
+.dropdown:active {
     background-color: rgb(241, 241, 241);
 }
 
-.dark .dropdown:active{
-    background-color:  hsl(208, 24%, 30%);
+.dark .dropdown:active {
+    background-color: hsl(208, 24%, 30%);
 }
 
-
-.dropdown-content{
+.dropdown-content {
     position: absolute;
     padding: 20px;
     background-color: var(--inputbg);
@@ -165,36 +159,36 @@ input:focus{
     width: 78%;
     top: 105%;
     left: 0.5%;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
     font-weight: 500;
     opacity: 0;
     pointer-events: none;
 }
 
-.dropdown-content p{
+.dropdown-content p {
     width: 100%;
     padding: 5px;
     border-radius: 5px;
 }
 
-.dropdown-content p:hover{
+.dropdown-content p:hover {
     background-color: var(--hovercolor);
 }
-.d-active{
+.d-active {
     background-color: var(--hovercolor);
 }
 
-.vism{
-    opacity: 1!important;
-    pointer-events: all!important;
+.vism {
+    opacity: 1 !important;
+    pointer-events: all !important;
 }
 
-.countries{
+.countries {
     width: 90vw;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(20%,1fr));
+    grid-template-columns: repeat(4, minmax(20%, 1fr));
     grid-template-rows: 380px;
     grid-row-gap: 30px;
     overflow-y: auto;
@@ -202,22 +196,22 @@ input:focus{
     padding-bottom: 5%;
 }
 
-.country{
+.country {
     width: 80%;
     height: 350px;
     background-color: var(--inputbg);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
-.country img{
+.country img {
     height: 50%;
 }
 
-.country h3{
+.country h3 {
     font-weight: 800;
     padding: 10px;
     font-size: 1rem;
@@ -226,24 +220,23 @@ input:focus{
     cursor: pointer;
 }
 
-.country p{
+.country p {
     font-weight: 700;
     padding: 5px 10px;
     font-size: 0.85rem;
     padding-left: 8%;
 }
 
-.country :nth-child(3){
+.country :nth-child(3) {
     padding-top: 10%;
 }
 
-.country p span{
+.country p span {
     font-weight: 400;
     font-size: 0.8rem;
-
 }
 
-.c-detail{
+.c-detail {
     position: absolute;
     width: 90%;
     padding-left: 5%;
@@ -257,20 +250,19 @@ input:focus{
     pointer-events: none;
 }
 
-.c-detail-top{
+.c-detail-top {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-top: 5%;
-
 }
 
-.c-detail-top .mode-bt{
+.c-detail-top .mode-bt {
     background-color: var(--inputbg);
     width: 120px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -280,7 +272,7 @@ input:focus{
     background-color: var(--hovercolor);
 }
 
-.c-detail-bottom{
+.c-detail-bottom {
     width: 100%;
     height: 100%;
     display: flex;
@@ -290,14 +282,14 @@ input:focus{
     margin-top: 5%;
 }
 
-.c-detail-bottom img{
+.c-detail-bottom img {
     width: 45%;
     height: 100%;
     object-fit: contain;
     object-position: top;
 }
 
-.cd-cont{
+.cd-cont {
     width: 45%;
     height: 50%;
     display: flex;
@@ -306,43 +298,40 @@ input:focus{
     justify-content: space-between;
 }
 
-h1{
+h1 {
     font-weight: 800;
     font-size: 1.9rem;
     margin-top: 5%;
 }
 
-.sub-d{
+.sub-d {
     display: flex;
     flex-direction: row;
     width: 100%;
     margin-bottom: 5%;
-    
 }
 
-.sub-d p{
+.sub-d p {
     font-weight: 700;
     padding: 5px 0px;
     font-size: 0.9rem;
 }
 
-.bc-dc p{
+.bc-dc p {
     font-weight: 700;
     font-size: 0.9rem;
-
 }
 
-.sub-d p span{
+.sub-d p span {
     font-weight: 400;
     font-size: 0.85rem;
-
 }
 
-.sub-d section{
+.sub-d section {
     width: 50%;
 }
 
-.bc-dc{
+.bc-dc {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -350,9 +339,9 @@ h1{
     gap: 20px;
 }
 
-.bc{
+.bc {
     background-color: var(--inputbg);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 5px 20px;
     max-width: 300px;
     border-radius: 5px;
@@ -360,18 +349,18 @@ h1{
     margin: 5px;
 }
 
-.bc p{
+.bc p {
     font-weight: 400;
 }
 
-@media only screen and (max-width:500px){
-
-    body,html{
+@media only screen and (max-width: 500px) {
+    body,
+    html {
         width: 100vw;
         overflow-x: hidden;
     }
 
-    .filer-bar{
+    .filer-bar {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
@@ -379,65 +368,64 @@ h1{
         margin-top: 12%;
     }
 
-    h2{
+    h2 {
         font-size: 0.85rem;
     }
 
-    .search-bar{
+    .search-bar {
         width: 80vw;
     }
 
-    .dropdown{
+    .dropdown {
         width: 50vw;
-        padding:15px 20px;
+        padding: 15px 20px;
         margin-top: 5%;
     }
 
-    .countries{
+    .countries {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .c-detail-bottom{
+    .c-detail-bottom {
         flex-direction: column;
         align-items: center;
         justify-content: normal;
     }
 
-    .c-detail-bottom img{
+    .c-detail-bottom img {
         width: 85vw;
         height: min-content;
         margin-top: 8%;
     }
 
-    .cd-cont{
+    .cd-cont {
         width: 85vw;
         margin-top: 8%;
         align-items: flex-start;
     }
 
-    .sub-d{
+    .sub-d {
         flex-direction: column;
         align-items: flex-start;
         justify-content: normal;
         width: 100%;
     }
-    .sub-d section{
+    .sub-d section {
         width: 90vw;
     }
-    .sub-d :nth-child(2){
+    .sub-d :nth-child(2) {
         margin-top: 5%;
     }
 
-    .bc-dc{
+    .bc-dc {
         flex-direction: column;
         align-items: flex-start;
         justify-content: normal;
         width: 100%;
     }
-    #bdc{
+    #bdc {
         margin-top: -5%;
         margin-bottom: 5%;
     }
-    
 }
